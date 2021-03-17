@@ -1,7 +1,6 @@
-import 'package:file_system_explorer/src/file_system_explorer_new.dart';
+import 'package:file_system_explorer/src/file_system_explorer_new.dart' show FileSystemExplorer;
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart'
-    show debugDefaultTargetPlatformOverride;
+import 'package:flutter/foundation.dart' show debugDefaultTargetPlatformOverride;
 
 void main() {
   debugDefaultTargetPlatformOverride = TargetPlatform.fuchsia;
@@ -16,15 +15,14 @@ class MyApp extends StatelessWidget {
       theme: new ThemeData(
           primarySwatch: Colors.blue,
           backgroundColor: Color(0xff3c3f41),
-          accentColor:  Color(0xff0d293e),
+          accentColor: Color(0xff0d293e),
           iconTheme: IconThemeData(
             color: Color(0xffbbbbbb),
           ),
           brightness: Brightness.light,
           textTheme: TextTheme(
-            body1: TextStyle(color: Color(0xffbbbbbb)),
-          )
-      ),
+            bodyText2: TextStyle(color: Color(0xffbbbbbb)),
+          )),
       home: new MyHomePage(),
     );
   }
@@ -38,7 +36,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   @override
   Widget build(BuildContext context) {
     return FileSystemExplorer(
@@ -46,5 +43,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
-
