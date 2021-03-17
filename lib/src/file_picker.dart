@@ -105,7 +105,7 @@ class FilePicker extends StatelessWidget {
   Widget build(BuildContext context) {
     ThemeData theme = Theme.of(context);
     return ChangeNotifierProvider<_CurrentFileSystemEntitiy>(
-      builder: (context) => __currentFileSystemEntitiy,
+      create: (context) => __currentFileSystemEntitiy,
       child: Container(
         color: theme.backgroundColor,
         padding: EdgeInsets.symmetric(
@@ -156,7 +156,7 @@ class FilePicker extends StatelessWidget {
                 children: <Widget>[
                   Spacer(),
                   Consumer<_CurrentFileSystemEntitiy>(
-                    builder: (context, current, child) {
+                    create: (context, current, child) {
                       return MaterialButton(
                         color: Color(0xff365880),
                         elevation: 2,
